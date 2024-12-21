@@ -1,5 +1,6 @@
 ﻿// See https://aka.ms/new-console-template for more information
 using ConsoleApp1.Classes;
+using System.Runtime.CompilerServices;
 
 Console.WriteLine("Hello, World!");
 
@@ -53,3 +54,27 @@ inheritanceCheck.showName();
 inheritanceCheck.showForinternal();
 // private internal -> within the class / derived class in the same assembly .
 inheritanceCheck.showforprotected();
+
+
+// OOPS methods 
+Oops.Encapsulation encapsulation = new();
+encapsulation.depositBalance(2.33M); // m is used to make the compiler understand it is decimal not double 
+encapsulation.getBalance();
+encapsulation.depositBalance(2.33M);
+encapsulation.depositBalance(2.33M);
+Console.WriteLine($"this is encapsulation : {encapsulation.getBalance()}");
+
+// check polymorphism
+Oops.Polymorphism polymorphism = new();
+// method overloading ..
+polymorphism.sum(1,2);
+// method overriding ..
+Oops.Override overding = new();
+overding.overriding();
+// abstraction -> we can use sealed keyword to stop further overriding in the derived classes 
+Oops.AbstractedClass abstraction = new();
+abstraction.overriding();
+abstraction.display();
+//using interfaces
+Oops.InhertInterface inheritInterface=new();
+inheritInterface.inheritInterface();   
