@@ -1,6 +1,8 @@
 ﻿// See https://aka.ms/new-console-template for more information
 using ConsoleApp1.Classes;
+using System.Net.NetworkInformation;
 using System.Runtime.CompilerServices;
+using static ConsoleApp1.Classes.Oops;
 
 Console.WriteLine("Hello, World!");
 
@@ -76,5 +78,5 @@ Oops.AbstractedClass abstraction = new();
 abstraction.overriding();
 abstraction.display();
 //using interfaces
-Oops.InhertInterface inheritInterface=new();
+Oops.Iinterface inheritInterface=new InhertInterface();
 inheritInterface.inheritInterface();   
