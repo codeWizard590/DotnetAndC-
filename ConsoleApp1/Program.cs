@@ -3,6 +3,7 @@ using ConsoleApp1.Classes;
 using System.Net.NetworkInformation;
 using System.Runtime.CompilerServices;
 using static ConsoleApp1.Classes.Oops;
+using static ConsoleApp1.Classes.Oops.Inheritence;
 
 Console.WriteLine("Hello, World!");
 
@@ -78,5 +79,18 @@ Oops.AbstractedClass abstraction = new();
 abstraction.overriding();
 abstraction.display();
 //using interfaces
+//Interfaces cannot be instantiated directly:
+//IAnimal animal = new IAnimal(); // ERROR
+//Instead, you need a concrete class, like new Cat() or new Dog().
 Oops.Iinterface inheritInterface=new InhertInterface();
 inheritInterface.inheritInterface();   
+
+// anonymous methods 
+Methods methods = new();
+methods.delegation("print this delegate");
+Closure closure = new();
+//var closurevalue = closure.func();
+//Console.WriteLine($"closure in action 1 {closurevalue()}");
+//Console.WriteLine($"closure in action 2 {closurevalue()}");
+closure.func();
+closure.func();
